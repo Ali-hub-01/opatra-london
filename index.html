@@ -3,458 +3,471 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <title>OPATRA London — медицинский центр косметологии в Караганде | Лицензированная клиника</title>
-  <meta name="description" content="OPATRA London — лицензированный медицинский центр косметологии в Караганде. Аппаратная и инъекционная косметология, коррекция фигуры, трихология, капельная терапия. Врачебный подход, видимый результат. Запись в WhatsApp.">
+  <title>OPATRA London — медицинский центр косметологии в Караганде</title>
+  <meta name="description" content="OPATRA London — премиальный медицинский центр косметологии в Караганде. Аппаратная и инъекционная косметология, коррекция фигуры, трихология, капельная терапия. Лицензия Минздрава РК. Ерубаева 49/2, «Белый ветер», 3 этаж.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
   <meta property="og:title" content="OPATRA London — медицинский центр косметологии в Караганде">
-  <meta property="og:description" content="Лицензированная медицина красоты: аппаратная и инъекционная косметология, коррекция фигуры, трихология. Караганда, ул. Ерубаева 49/2.">
+  <meta property="og:description" content="Премиальная медицинская косметология: 8 направлений, врачи, лицензия Минздрава РК. Запись в WhatsApp.">
   <meta property="og:url" content="https://ali-hub-01.github.io/opatra-london/">
-  <!-- TODO: заменить og:image на баннер 1200x630 -->
+  <!-- TODO: заменить og:image на брендированный баннер 1200x630 (assets/og-image.jpg) -->
   <meta property="og:image" content="https://ali-hub-01.github.io/opatra-london/assets/logo.png">
+  <meta property="og:locale" content="ru_RU">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="OPATRA London — медицинский центр косметологии в Караганде">
-  <meta name="twitter:description" content="Лицензированная медицина красоты. Врачебный подход, безопасность процедур, видимый результат.">
+  <meta name="twitter:description" content="Премиальная медицинская косметология: 8 направлений, врачи, лицензия Минздрава РК.">
   <meta name="twitter:image" content="https://ali-hub-01.github.io/opatra-london/assets/logo.png">
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/logo.png">
   <link rel="canonical" href="https://ali-hub-01.github.io/opatra-london/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo.png">
 
-  <!-- Шрифты: Cormorant Garamond (заголовки) + Manrope (текст) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Золотая нить: индикатор прочтения страницы -->
-  <div class="thread" aria-hidden="true"><span class="thread__fill" id="threadFill"></span></div>
-
-  <!-- Свечение за курсором (только десктоп) -->
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <!-- Свечение под курсором (только десктоп) -->
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <!-- ШАПКА -->
   <header class="header" id="header">
-    <div class="header__inner">
-      <a href="#top" class="header__logo" aria-label="OPATRA London — на главную">
-        <img src="assets/logo.png" alt="OPATRA London — медицинский центр косметологии" width="160" height="61">
+    <div class="header__inner container">
+      <a href="#hero" class="header__logo" aria-label="OPATRA London — на главную">
+        <img src="assets/logo.png" alt="OPATRA London" width="150" height="46">
       </a>
 
       <nav class="nav" id="nav" aria-label="Основная навигация">
-        <a href="#services" class="nav__link">Услуги</a>
         <a href="#about" class="nav__link">О центре</a>
-        <a href="#license" class="nav__link">Лицензия</a>
+        <a href="#services" class="nav__link">Услуги</a>
         <a href="#results" class="nav__link">Результаты</a>
-        <a href="#offers" class="nav__link">Предложения</a>
+        <a href="#license" class="nav__link">Лицензия</a>
+        <a href="#offers" class="nav__link">Акции</a>
         <a href="#contacts" class="nav__link">Контакты</a>
-        <a href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D0%B4%D1%83%D1%80%D1%83" target="_blank" rel="noopener" class="nav__cta">Записаться</a>
+        <a href="https://wa.me/77772441614" target="_blank" rel="noopener" class="btn btn--gold nav__cta">Записаться</a>
       </nav>
 
       <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="top">
+  <main>
 
-    <!-- ============ HERO ============ -->
+    <!-- HERO -->
     <section class="hero" id="hero">
       <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
       <div class="hero__aura" aria-hidden="true"></div>
 
-      <div class="hero__content">
-        <img class="hero__logo" src="assets/logo.png" alt="OPATRA London" width="320" height="121">
-        <p class="hero__eyebrow reveal-line">Лицензированный медицинский центр косметологии · Караганда</p>
+      <div class="hero__content container">
+        <p class="hero__kicker reveal">Медицинский центр косметологии · Караганда</p>
         <h1 class="hero__title">
-          <span class="hero__title-line">Медицина,</span>
-          <span class="hero__title-line">которая создаёт</span>
-          <span class="hero__title-line hero__title-line--gold">красоту</span>
+          <span class="reveal d1">Красота —</span>
+          <span class="hero__title-gold reveal d2">это медицина</span>
+          <span class="hero__title-sub reveal d3">высокого класса</span>
         </h1>
-        <p class="hero__sub">Врачебный подход. Безопасность каждой процедуры.<br>Результат, который видно.</p>
-        <div class="hero__actions">
-          <a href="#booking" class="btn btn--gold">Записаться на приём</a>
-          <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+        <p class="hero__lead reveal d4">8 направлений · врачи · лицензия Минздрава РК</p>
+        <div class="hero__actions reveal d5">
+          <a href="#booking" class="btn btn--gold btn--lg">Записаться на приём</a>
+          <a href="#services" class="btn btn--ghost btn--lg">Направления</a>
         </div>
       </div>
 
-      <a class="hero__scroll" href="#about" aria-label="Листайте вниз">
-        <span class="hero__scroll-line"></span>
+      <a href="#about" class="hero__scroll" aria-label="Листайте вниз">
+        <span class="hero__scroll-dot"></span>
       </a>
     </section>
 
-    <!-- ============ О ЦЕНТРЕ ============ -->
-    <section class="section section--dark about" id="about">
+    <!-- О ЦЕНТРЕ -->
+    <section class="about section-light" id="about">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Досье центра</span>
-          <h2 class="section__title">Не салон.<br><em>Медицинский центр</em></h2>
-        </div>
-
         <div class="about__grid">
-          <p class="about__lead reveal">OPATRA London — лицензированный медицинский центр косметологии в Караганде. Каждая процедура здесь — это медицинский протокол: диагностика, назначение врача, сертифицированные препараты и аппараты, контроль результата.</p>
-          <p class="about__text reveal">Мы работаем в премиальном сегменте не из-за интерьеров, а из-за стандартов: стерильность операционного уровня, персональные планы коррекции и честный прогноз результата ещё до первой процедуры.</p>
-        </div>
-
-        <dl class="counters reveal" aria-label="Центр в цифрах">
-          <div class="counters__item">
-            <dt class="counters__num"><span class="js-count" data-count="8">0</span></dt>
-            <dd class="counters__label">направлений медицины красоты</dd>
+          <div class="about__text">
+            <p class="kicker reveal">О центре</p>
+            <h2 class="h2 reveal d1">Эстетика, доказанная <em>медициной</em></h2>
+            <p class="about__phrase reveal d2">Врачебный подход, мировые технологии и атмосфера, в которую хочется возвращаться.</p>
           </div>
-          <div class="counters__item">
-            <dt class="counters__num"><span class="js-count" data-count="40">0</span>+</dt>
-            <dd class="counters__label">видов процедур в протоколах</dd>
+          <div class="about__stats">
+            <div class="stat reveal">
+              <span class="stat__num" data-count="8">0</span>
+              <span class="stat__label">направлений</span>
+            </div>
+            <div class="stat reveal d1">
+              <span class="stat__num" data-count="40" data-suffix="+">0</span>
+              <span class="stat__label">процедур</span>
+            </div>
+            <div class="stat reveal d2">
+              <span class="stat__num">I</span>
+              <span class="stat__label">класс мед. лицензии</span>
+            </div>
           </div>
-          <div class="counters__item">
-            <dt class="counters__num"><span class="js-count" data-count="1500">0</span>+</dt>
-            <dd class="counters__label">проведённых процедур</dd>
-          </div>
-          <div class="counters__item">
-            <dt class="counters__num"><span class="js-count" data-count="97">0</span>%</dt>
-            <dd class="counters__label">пациентов возвращаются</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ============ УСЛУГИ (ПРОТОКОЛЫ) ============ -->
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Протоколы · 01–08</span>
-          <h2 class="section__title">Направления<br><em>центра</em></h2>
-          <p class="section__note">Каждое направление ведёт врач. Нажмите «Записаться» — менеджер подберёт время и подробно проконсультирует в WhatsApp.</p>
-        </div>
-
-        <div class="protocols">
-
-          <!-- 01 Аппаратная -->
-          <article class="protocol reveal" id="apparatnaya">
-            <div class="protocol__head">
-              <span class="protocol__num">01</span>
-              <h3 class="protocol__title">Аппаратная косметология</h3>
-            </div>
-            <p class="protocol__desc">Технологии клинического уровня для омоложения и коррекции без инъекций. Аппараты с медицинской сертификацией, параметры процедур подбирает врач по состоянию кожи.</p>
-            <ul class="protocol__list">
-              <li>Лазерная эпиляция</li>
-              <li>RF-лифтинг</li>
-              <li>SMAS-лифтинг</li>
-              <li>Фотоомоложение</li>
-              <li>Лазерная шлифовка</li>
-              <li>Микротоковая терапия</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B0%D0%BF%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 02 Инъекционная -->
-          <article class="protocol reveal" id="inekcionnaya">
-            <div class="protocol__head">
-              <span class="protocol__num">02</span>
-              <h3 class="protocol__title">Инъекционная косметология</h3>
-            </div>
-            <p class="protocol__desc">Работа с качеством кожи и возрастными изменениями только сертифицированными препаратами. Выполняется врачом-косметологом после очной консультации.</p>
-            <ul class="protocol__list">
-              <li>Ботулинотерапия</li>
-              <li>Биоревитализация</li>
-              <li>Мезотерапия</li>
-              <li>Контурная пластика</li>
-              <li>Коллагенотерапия</li>
-              <li>Плазмотерапия</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B8%D0%BD%D1%8A%D0%B5%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 03 Эстетическая -->
-          <article class="protocol reveal" id="esteticheskaya">
-            <div class="protocol__head">
-              <span class="protocol__num">03</span>
-              <h3 class="protocol__title">Эстетическая косметология</h3>
-            </div>
-            <p class="protocol__desc">Деликатные уходовые протоколы, которые возвращают коже здоровое сияние и ровный тон. Основа долгосрочной красоты и подготовка к аппаратным методикам.</p>
-            <ul class="protocol__list">
-              <li>Комбинированная чистка</li>
-              <li>Химические пилинги</li>
-              <li>Карбокситерапия</li>
-              <li>Уходовые программы</li>
-              <li>Дарсонвализация</li>
-              <li>Альгинатные маски</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 04 Коррекция фигуры -->
-          <article class="protocol reveal" id="korrekciya-figury">
-            <div class="protocol__head">
-              <span class="protocol__num">04</span>
-              <h3 class="protocol__title">Коррекция фигуры</h3>
-            </div>
-            <p class="protocol__desc">Комплексные программы моделирования силуэта: аппаратные методики и врачебное сопровождение. План строится под вашу цель — от локальной коррекции до полного курса.</p>
-            <ul class="protocol__list">
-              <li>LPG-массаж</li>
-              <li>Кавитация</li>
-              <li>RF-липолиз</li>
-              <li>Прессотерапия</li>
-              <li>Липолитическая терапия</li>
-              <li>Программы курсами</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%20%D1%84%D0%B8%D0%B3%D1%83%D1%80%D1%8B" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 05 Капельная терапия -->
-          <article class="protocol reveal" id="kapelnaya-terapiya">
-            <div class="protocol__head">
-              <span class="protocol__num">05</span>
-              <h3 class="protocol__title">Капельная терапия</h3>
-            </div>
-            <p class="protocol__desc">Внутривенные витаминные и восстановительные комплексы под контролем врача. Красота, которая начинается изнутри: энергия, иммунитет, качество кожи и волос.</p>
-            <ul class="protocol__list">
-              <li>Детокс-программы</li>
-              <li>«Капельницы красоты»</li>
-              <li>Иммунная поддержка</li>
-              <li>Антиоксидантные комплексы</li>
-              <li>Восстановление и энергия</li>
-              <li>Индивидуальные составы</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BA%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 06 Массаж -->
-          <article class="protocol reveal" id="massage">
-            <div class="protocol__head">
-              <span class="protocol__num">06</span>
-              <h3 class="protocol__title">Массаж</h3>
-            </div>
-            <p class="protocol__desc">Профессиональные техники массажа лица и тела от сертифицированных специалистов. От глубокого расслабления до выраженного лимфодренажного и скульптурного эффекта.</p>
-            <ul class="protocol__list">
-              <li>Лечебный массаж</li>
-              <li>Лимфодренажный</li>
-              <li>Скульптурный массаж лица</li>
-              <li>Буккальный массаж</li>
-              <li>Антицеллюлитный</li>
-              <li>Релакс-программы</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 07 Трихология -->
-          <article class="protocol reveal" id="trihologiya">
-            <div class="protocol__head">
-              <span class="protocol__num">07</span>
-              <h3 class="protocol__title">Трихология</h3>
-            </div>
-            <p class="protocol__desc">Диагностика и лечение волос и кожи головы на врачебном уровне. Работаем с выпадением, истончением и себореей — по результатам трихоскопии, а не «на глаз».</p>
-            <ul class="protocol__list">
-              <li>Трихоскопия (диагностика)</li>
-              <li>Мезотерапия кожи головы</li>
-              <li>Плазмотерапия</li>
-              <li>Программы против выпадения</li>
-              <li>Пилинги кожи головы</li>
-              <li>Врачебное сопровождение</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D1%82%D1%80%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
-          <!-- 08 Консультации -->
-          <article class="protocol reveal" id="konsultacii">
-            <div class="protocol__head">
-              <span class="protocol__num">08</span>
-              <h3 class="protocol__title">Врачебные консультации</h3>
-            </div>
-            <p class="protocol__desc">Любая программа в OPATRA London начинается с консультации врача: осмотр, диагностика, честный прогноз и персональный план процедур без навязывания лишнего.</p>
-            <ul class="protocol__list">
-              <li>Консультация врача-косметолога</li>
-              <li>Консультация трихолога</li>
-              <li>Диагностика кожи</li>
-              <li>Индивидуальный план коррекции</li>
-              <li>Ведение пациента курсом</li>
-              <li>Второе мнение</li>
-            </ul>
-            <a class="protocol__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B2%D1%80%D0%B0%D1%87%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
-          </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ============ ЛИЦЕНЗИЯ ============ -->
-    <section class="section section--dark license" id="license">
+    <!-- УСЛУГИ -->
+    <section class="services section-dark" id="services">
       <div class="container">
-        <div class="license__card reveal">
-          <div class="license__seal" aria-hidden="true">
-            <svg viewBox="0 0 120 120" width="96" height="96">
-              <circle cx="60" cy="60" r="56" fill="none" stroke="url(#sealGrad)" stroke-width="1.5"/>
-              <circle cx="60" cy="60" r="44" fill="none" stroke="url(#sealGrad)" stroke-width="0.8" stroke-dasharray="3 4"/>
-              <path d="M60 34 L66 52 L85 52 L70 63 L76 82 L60 70 L44 82 L50 63 L35 52 L54 52 Z" fill="none" stroke="url(#sealGrad)" stroke-width="1.5" stroke-linejoin="round"/>
-              <defs>
-                <linearGradient id="sealGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#F4E3B2"/><stop offset="0.5" stop-color="#C9A24B"/><stop offset="1" stop-color="#8C6B23"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+        <p class="kicker kicker--gold reveal">Направления</p>
+        <h2 class="h2 h2--light reveal d1">Восемь путей <em>к себе</em></h2>
 
-          <span class="section__index">Гарантия безопасности</span>
-          <h2 class="section__title">Настоящая медицина,<br><em>а не салон</em></h2>
-          <p class="license__lead">Мы работаем по государственной медицинской лицензии. Это значит: врачи с подтверждённой квалификацией, сертифицированные препараты и оборудование, медицинские стандарты стерильности и ответственность клиники перед законом.</p>
+        <nav class="services__nav reveal d2" aria-label="Быстрый переход к услугам">
+          <a href="#apparatnaya">Аппаратная</a>
+          <a href="#inekcionnaya">Инъекции</a>
+          <a href="#esteticheskaya">Эстетика</a>
+          <a href="#korrekciya-figury">Фигура</a>
+          <a href="#kapelnaya-terapiya">IV-терапия</a>
+          <a href="#massage">Массаж</a>
+          <a href="#trihologiya">Трихология</a>
+          <a href="#konsultacii">Консультации</a>
+        </nav>
 
-          <dl class="license__facts">
-            <div class="license__fact">
-              <dt>Лицензия</dt>
-              <dd>№ 24033797 на медицинскую деятельность (класс 1)</dd>
-            </div>
-            <div class="license__fact">
-              <dt>Дата выдачи</dt>
-              <dd>26 ноября 2024 года</dd>
-            </div>
-            <div class="license__fact">
-              <dt>Юридическое лицо</dt>
-              <dd>ТОО «ХАН ЛИ КЗ», БИН 161140007400</dd>
-            </div>
-            <div class="license__fact">
-              <dt>Лицензиар</dt>
-              <dd>Департамент медицинского и фармацевтического контроля МЗ РК по Карагандинской области</dd>
-            </div>
-          </dl>
+        <div class="services__list">
 
-          <a class="btn btn--gold" href="assets/license.pdf" target="_blank" rel="noopener">Посмотреть лицензию (PDF)</a>
+          <!-- 01 -->
+          <article class="service reveal" id="apparatnaya">
+            <span class="service__num" aria-hidden="true">01</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M6 24h8l4-10 8 20 4-10h12"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Аппаратная косметология</h3>
+              <p class="service__essence">Результат без скальпеля — энергия света и радиоволн.</p>
+              <ul class="chips">
+                <li>RF-лифтинг</li>
+                <li>HIFU-SMAS</li>
+                <li>Фотоомоложение</li>
+                <li>Лазерная эпиляция</li>
+                <li>Микротоки</li>
+                <li>Карбоновый пилинг</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B0%D0%BF%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="service reveal" id="inekcionnaya">
+            <span class="service__num" aria-hidden="true">02</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 8c-5 7-8 11.5-8 16a8 8 0 0 0 16 0c0-4.5-3-9-8-16z"/>
+                <path d="M20 26a4 4 0 0 0 4 4"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Инъекционная косметология</h3>
+              <p class="service__essence">Точность врача — естественность результата.</p>
+              <ul class="chips">
+                <li>Ботулинотерапия</li>
+                <li>Контурная пластика</li>
+                <li>Биоревитализация</li>
+                <li>Мезотерапия</li>
+                <li>Полинуклеотиды</li>
+                <li>Коллагенотерапия</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B8%D0%BD%D1%8A%D0%B5%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="service reveal" id="esteticheskaya">
+            <span class="service__num" aria-hidden="true">03</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 6l3.2 11L38 20l-10.8 3L24 34l-3.2-11L10 20l10.8-3z"/>
+                <path d="M37 32l1.4 4.6L43 38l-4.6 1.4L37 44l-1.4-4.6L31 38l4.6-1.4z"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Эстетическая косметология</h3>
+              <p class="service__essence">Здоровое сияние кожи — как ежедневная норма.</p>
+              <ul class="chips">
+                <li>Комбинированная чистка</li>
+                <li>Химические пилинги</li>
+                <li>Уход по типу кожи</li>
+                <li>Карбокситерапия</li>
+                <li>Массаж лица</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D1%8D%D1%81%D1%82%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="service reveal" id="korrekciya-figury">
+            <span class="service__num" aria-hidden="true">04</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M18 6c0 8-6 10-6 18s6 10 6 18M30 6c0 8 6 10 6 18s-6 10-6 18"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Коррекция фигуры</h3>
+              <p class="service__essence">Силуэт, вылепленный технологиями.</p>
+              <ul class="chips">
+                <li>LPG-массаж</li>
+                <li>Кавитация</li>
+                <li>RF-лифтинг тела</li>
+                <li>Прессотерапия</li>
+                <li>Криолиполиз</li>
+                <li>Обёртывания</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%20%D1%84%D0%B8%D0%B3%D1%83%D1%80%D1%8B" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="service reveal" id="kapelnaya-terapiya">
+            <span class="service__num" aria-hidden="true">05</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 6h16M24 6v10"/>
+                <path d="M24 16c-4.5 6-7 9.8-7 13.5a7 7 0 0 0 14 0C31 25.8 28.5 22 24 16z"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Капельная терапия</h3>
+              <p class="service__essence">Питание и восстановление — изнутри.</p>
+              <ul class="chips">
+                <li>Детокс</li>
+                <li>Иммунитет</li>
+                <li>Anti-age коктейли</li>
+                <li>Энергия и восстановление</li>
+                <li>Красота кожи и волос</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BA%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="service reveal" id="massage">
+            <span class="service__num" aria-hidden="true">06</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M8 30c6-4 10-12 16-12s10 8 16 12M8 38c6-4 10-10 16-10s10 6 16 10"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Массаж</h3>
+              <p class="service__essence">Руки, которые возвращают лёгкость.</p>
+              <ul class="chips">
+                <li>Классический</li>
+                <li>Лимфодренажный</li>
+                <li>Скульптурный массаж лица</li>
+                <li>Антицеллюлитный</li>
+                <li>Релакс-программы</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 07 -->
+          <article class="service reveal" id="trihologiya">
+            <span class="service__num" aria-hidden="true">07</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M18 42c0-10-8-12-8-22a12 12 0 0 1 24 0c0 6-4 8-4 14"/>
+                <circle cx="34" cy="34" r="7"/>
+                <path d="M39 39l5 5"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Трихология</h3>
+              <p class="service__essence">Наука о здоровье и густоте волос.</p>
+              <ul class="chips">
+                <li>Трихоскопия</li>
+                <li>Мезотерапия кожи головы</li>
+                <li>Плазмотерапия</li>
+                <li>Пилинги кожи головы</li>
+                <li>Программы против выпадения</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D1%82%D1%80%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <!-- 08 -->
+          <article class="service reveal" id="konsultacii">
+            <span class="service__num" aria-hidden="true">08</span>
+            <div class="service__medal" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v10a10 10 0 0 0 20 0V6"/>
+                <path d="M22 26v4a9 9 0 0 0 18 0v-4"/>
+                <circle cx="40" cy="22" r="4"/>
+              </svg>
+            </div>
+            <div class="service__body">
+              <h3 class="service__title">Врачебные консультации</h3>
+              <p class="service__essence">Путь к результату начинается с диагноза.</p>
+              <ul class="chips">
+                <li>Врач-косметолог</li>
+                <li>Врач-трихолог</li>
+                <li>Диагностика кожи</li>
+                <li>Индивидуальный план процедур</li>
+              </ul>
+              <a class="service__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%3A%20%D0%B2%D1%80%D0%B0%D1%87%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F" target="_blank" rel="noopener">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ============ ДО / ПОСЛЕ ============ -->
-    <section class="section results" id="results">
+    <!-- РЕЗУЛЬТАТЫ: ДО / ПОСЛЕ -->
+    <section class="results section-light" id="results">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Результаты</span>
-          <h2 class="section__title">До <em>и после</em></h2>
-          <p class="section__note">Потяните ползунок, чтобы сравнить. Изображения — демонстрационные плейсхолдеры, фотографии пациентов будут добавлены с их согласия.</p>
-        </div>
+        <p class="kicker reveal">Результаты</p>
+        <h2 class="h2 reveal d1">До <em>и после</em></h2>
 
-        <!-- Слайдер сравнения. TODO: заменить плейсхолдеры на реальные фото клиента (до/после) -->
-        <div class="ba reveal" id="baSlider">
-          <div class="ba__pane ba__pane--before" aria-hidden="true">
+        <div class="ba reveal d2" id="baSlider" role="slider" tabindex="0"
+             aria-label="Сравнение до и после: двигайте ползунок" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <!-- TODO: заменить на реальное фото клиента (сторона «До») -->
+          <div class="ba__before">
             <span class="ba__tag">До</span>
           </div>
-          <div class="ba__pane ba__pane--after" id="baAfter" aria-hidden="true">
+          <!-- TODO: заменить на реальное фото клиента (сторона «После») -->
+          <div class="ba__after" id="baAfter">
             <span class="ba__tag ba__tag--after">После</span>
           </div>
           <div class="ba__handle" id="baHandle" aria-hidden="true">
-            <span class="ba__handle-line"></span>
-            <span class="ba__handle-knob">⟷</span>
-            <span class="ba__handle-line"></span>
+            <span class="ba__handle-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+            </span>
           </div>
-          <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Сравнение фото до и после">
         </div>
-
-        <p class="results__caption reveal">Пример: курс аппаратного омоложения · фото заменяемы <!-- TODO: заменить на реальное фото клиента --></p>
+        <p class="results__hint reveal d3">Потяните ползунок · фото публикуются с согласия клиентов</p>
       </div>
     </section>
 
-    <!-- ============ СПЕЦПРЕДЛОЖЕНИЯ ============ -->
-    <section class="section section--dark offers" id="offers">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Спецпредложения · примеры</span>
-          <h2 class="section__title">Начать <em>выгодно</em></h2>
-          <p class="section__note">Условия предложений — примеры, актуальные акции уточняйте в WhatsApp.</p>
+    <!-- ЛИЦЕНЗИЯ -->
+    <section class="license section-dark" id="license">
+      <div class="license__glow" aria-hidden="true"></div>
+      <div class="container license__grid">
+        <div class="license__seal reveal" aria-hidden="true">
+          <svg viewBox="0 0 220 220" class="seal">
+            <defs>
+              <linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#F4E3B2"/>
+                <stop offset=".5" stop-color="#C9A24B"/>
+                <stop offset="1" stop-color="#8C6B23"/>
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#sealGold)">
+              <circle cx="110" cy="110" r="104" stroke-width="1" opacity=".45"/>
+              <circle cx="110" cy="110" r="96" stroke-width="2.5"/>
+              <circle cx="110" cy="110" r="66" stroke-width="1.2"/>
+              <g stroke-width="2" opacity=".9">
+                <path d="M110 10v12M110 198v12M10 110h12M198 110h12M39 39l8.5 8.5M172.5 172.5l8.5 8.5M181 39l-8.5 8.5M47.5 172.5L39 181"/>
+              </g>
+            </g>
+            <text x="110" y="98" text-anchor="middle" fill="url(#sealGold)" font-size="14" letter-spacing="4" font-family="Manrope, sans-serif">ЛИЦЕНЗИЯ</text>
+            <text x="110" y="124" text-anchor="middle" fill="url(#sealGold)" font-size="19" letter-spacing="2" font-weight="600" font-family="Manrope, sans-serif">№ 24033797</text>
+            <text x="110" y="146" text-anchor="middle" fill="#9a9aa2" font-size="10.5" letter-spacing="2.5" font-family="Manrope, sans-serif">МИНЗДРАВ РК</text>
+          </svg>
         </div>
+
+        <div class="license__text">
+          <p class="kicker kicker--gold reveal">Доверие</p>
+          <h2 class="h2 h2--light reveal d1">Медицинский центр. <em>Официально</em></h2>
+          <dl class="license__facts reveal d2">
+            <div><dt>Лицензия</dt><dd>№ 24033797 · класс 1 · выдана 26.11.2024</dd></div>
+            <div><dt>Юрлицо</dt><dd>ТОО «ХАН ЛИ КЗ» · БИН 161140007400</dd></div>
+            <div><dt>Лицензиар</dt><dd>Департамент мед. и фарм. контроля МЗ РК по Карагандинской области</dd></div>
+          </dl>
+          <a href="assets/license.pdf" target="_blank" rel="noopener" class="btn btn--gold reveal d3">Посмотреть лицензию</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- АКЦИИ -->
+    <section class="offers section-light" id="offers">
+      <div class="container">
+        <p class="kicker reveal">Спецпредложения</p>
+        <h2 class="h2 reveal d1">Сейчас <em>выгодно</em></h2>
+        <p class="note reveal d2">Примеры предложений — актуальные условия уточняйте в WhatsApp</p>
 
         <div class="offers__grid">
           <article class="offer reveal">
-            <span class="offer__badge">−20%</span>
+            <span class="offer__badge">−50%</span>
             <h3 class="offer__title">Первая консультация врача</h3>
-            <p class="offer__text">Знакомство с центром: диагностика, план процедур и честный прогноз результата со скидкой 20%.</p>
-            <a class="offer__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D0%B5%D1%80%D0%B2%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E" target="_blank" rel="noopener">Уточнить условия →</a>
+            <p class="offer__text">Диагностика кожи + индивидуальный план</p>
+            <a href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%3A%20%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%E2%88%9250%25" target="_blank" rel="noopener" class="offer__cta">Воспользоваться <span aria-hidden="true">→</span></a>
           </article>
-
-          <article class="offer reveal">
-            <span class="offer__badge">Курс</span>
-            <h3 class="offer__title">Программы курсами</h3>
-            <p class="offer__text">При покупке курса из 5+ процедур — специальная цена и приоритетная запись на удобное время.</p>
-            <a class="offer__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B" target="_blank" rel="noopener">Уточнить условия →</a>
+          <article class="offer offer--dark reveal d1">
+            <span class="offer__badge">1+1</span>
+            <h3 class="offer__title">Курс капельной терапии</h3>
+            <p class="offer__text">Вторая капельница курса — в подарок</p>
+            <a href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%3A%20%D0%BA%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F%201%2B1" target="_blank" rel="noopener" class="offer__cta">Воспользоваться <span aria-hidden="true">→</span></a>
           </article>
-
-          <article class="offer reveal">
-            <span class="offer__badge">Duo</span>
-            <h3 class="offer__title">Приведите подругу</h3>
-            <p class="offer__text">Посетите центр вдвоём — каждая получит комплимент от клиники и бонус на следующую процедуру.</p>
-            <a class="offer__cta" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%20%C2%AB%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D0%B4%D0%B8%20%D0%BF%D0%BE%D0%B4%D1%80%D1%83%D0%B3%D1%83%C2%BB" target="_blank" rel="noopener">Уточнить условия →</a>
+          <article class="offer reveal d2">
+            <span class="offer__badge">−20%</span>
+            <h3 class="offer__title">Курс коррекции фигуры</h3>
+            <p class="offer__text">При покупке курса из 8 процедур</p>
+            <a href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%3A%20%D0%BA%D1%83%D1%80%D1%81%20%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D0%B8%20%D1%84%D0%B8%D0%B3%D1%83%D1%80%D1%8B%20%E2%88%9220%25" target="_blank" rel="noopener" class="offer__cta">Воспользоваться <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ ОТЗЫВЫ ============ -->
-    <section class="section reviews" id="reviews">
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews section-graphite" id="reviews">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Отзывы · примеры</span>
-          <h2 class="section__title">Нам <em>доверяют</em></h2>
-          <p class="section__note">Тексты отзывов — примеры оформления. Реальные отзывы пациентов — в Instagram и 2GIS.</p>
-        </div>
+        <p class="kicker kicker--gold reveal">Отзывы</p>
+        <h2 class="h2 h2--light reveal d1">Нас <em>рекомендуют</em></h2>
+        <p class="note note--dark reveal d2">Примеры отзывов — реальные публикуются в Instagram</p>
 
         <div class="reviews__grid">
-          <!-- TODO: заменить на реальные отзывы клиентов -->
           <figure class="review reveal">
-            <span class="review__avatar" aria-hidden="true">А</span>
-            <blockquote class="review__text">«Впервые попала не в салон, а в настоящую клинику: врач сначала всё объяснила, показала лицензию и сертификаты препаратов. Результат после курса — заметный».</blockquote>
-            <figcaption class="review__meta">Пациентка центра · аппаратная косметология</figcaption>
+            <blockquote>Кожа после курса HIFU — как после отпуска. Врач всё объяснила, без навязывания.</blockquote>
+            <figcaption><span class="review__name">Алия</span><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></figcaption>
           </figure>
-
-          <figure class="review reveal">
-            <span class="review__avatar" aria-hidden="true">Д</span>
-            <blockquote class="review__text">«Делала биоревитализацию. Понравилось, что никто ничего не навязывал — наоборот, врач отговорила от лишней процедуры. Такому подходу доверяешь».</blockquote>
-            <figcaption class="review__meta">Пациентка центра · инъекционная косметология</figcaption>
+          <figure class="review reveal d1">
+            <blockquote>Делаю биоревитализацию только здесь. Стерильно, деликатно, результат естественный.</blockquote>
+            <figcaption><span class="review__name">Мадина</span><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></figcaption>
           </figure>
-
-          <figure class="review reveal">
-            <span class="review__avatar" aria-hidden="true">М</span>
-            <blockquote class="review__text">«Пришёл к трихологу с выпадением волос. Сделали трихоскопию, назначили курс — через три месяца динамика видна даже на контрольных снимках».</blockquote>
-            <figcaption class="review__meta">Пациент центра · трихология</figcaption>
+          <figure class="review reveal d2">
+            <blockquote>Трихолог нашла причину выпадения волос за один приём. Через три месяца — другая картина.</blockquote>
+            <figcaption><span class="review__name">Инкар</span><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></figcaption>
           </figure>
-
-          <figure class="review reveal">
-            <span class="review__avatar" aria-hidden="true">С</span>
-            <blockquote class="review__text">«Капельная терапия — открытие. После курса ушла постоянная усталость, кожа стала свежее. Атмосфера в центре — спокойная и очень статусная».</blockquote>
-            <figcaption class="review__meta">Пациентка центра · капельная терапия</figcaption>
+          <figure class="review reveal d3">
+            <blockquote>Атмосфера уровня — от входа до кабинета. Капельницы курсом: энергия вернулась.</blockquote>
+            <figcaption><span class="review__name">Дана</span><span class="review__stars" aria-label="Оценка 5 из 5">★★★★★</span></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- ============ ЗАПИСЬ ============ -->
-    <section class="section section--dark booking" id="booking">
-      <div class="container container--narrow">
-        <div class="section__head section__head--center reveal">
-          <span class="section__index">Запись</span>
-          <h2 class="section__title">Запишитесь <em>на приём</em></h2>
-          <p class="section__note">Заполните форму — заявка откроется в WhatsApp, менеджер подтвердит время. Мы не храним ваши данные на сайте.</p>
+    <!-- ЗАПИСЬ -->
+    <section class="booking section-dark" id="booking">
+      <div class="booking__aura" aria-hidden="true"></div>
+      <div class="container booking__grid">
+        <div class="booking__intro">
+          <p class="kicker kicker--gold reveal">Запись</p>
+          <h2 class="h2 h2--light reveal d1">Один шаг <em>до преображения</em></h2>
+          <p class="booking__phrase reveal d2">Заявка уйдёт нам в WhatsApp — ответим быстро.</p>
         </div>
 
-        <form class="form reveal" id="bookingForm" novalidate>
+        <form class="form reveal d2" id="bookingForm" novalidate>
           <div class="form__field">
-            <label class="form__label" for="fName">Ваше имя</label>
-            <input class="form__input" id="fName" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
-            <span class="form__error" id="errName">Пожалуйста, укажите имя</span>
+            <label for="fName">Имя</label>
+            <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+            <span class="form__error" id="errName">Укажите имя</span>
           </div>
-
           <div class="form__field">
-            <label class="form__label" for="fPhone">Телефон</label>
-            <input class="form__input" id="fPhone" name="phone" type="tel" placeholder="+7 ___ ___ __ __" autocomplete="tel" inputmode="tel" required>
-            <span class="form__error" id="errPhone">Укажите корректный номер телефона</span>
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+7 ___ ___ __ __" autocomplete="tel" inputmode="tel" required>
+            <span class="form__error" id="errPhone">Укажите корректный номер</span>
           </div>
-
           <div class="form__field">
-            <label class="form__label" for="fService">Услуга</label>
-            <select class="form__input form__select" id="fService" name="service" required>
+            <label for="fService">Услуга</label>
+            <select id="fService" name="service" required>
               <option value="" selected disabled>Выберите направление</option>
               <option>Аппаратная косметология</option>
               <option>Инъекционная косметология</option>
@@ -467,70 +480,68 @@
             </select>
             <span class="form__error" id="errService">Выберите услугу</span>
           </div>
-
-          <button class="btn btn--gold form__submit" type="submit">Отправить заявку в WhatsApp</button>
-          <p class="form__hint">Нажимая кнопку, вы переходите в WhatsApp с готовым текстом заявки. Отправка — только с вашего согласия, из вашего мессенджера.</p>
+          <button type="submit" class="btn btn--gold btn--lg form__submit">Отправить в WhatsApp</button>
+          <p class="form__note">Кнопка откроет чат WhatsApp с готовым сообщением. Данные никуда не сохраняются.</p>
         </form>
       </div>
     </section>
 
-    <!-- ============ КОНТАКТЫ ============ -->
-    <section class="section contacts" id="contacts">
+    <!-- КОНТАКТЫ -->
+    <section class="contacts section-light" id="contacts">
       <div class="container">
-        <div class="section__head reveal">
-          <span class="section__index">Контакты</span>
-          <h2 class="section__title">Мы <em>рядом</em></h2>
-        </div>
+        <p class="kicker reveal">Контакты</p>
+        <h2 class="h2 reveal d1">Мы <em>рядом</em></h2>
 
         <div class="contacts__grid">
-          <div class="contacts__card reveal">
-            <h3 class="contacts__label">Адрес</h3>
-            <p class="contacts__value">г. Караганда, ул. Ерубаева, 49/2,<br>здание «Белый ветер», 3 этаж</p>
-          </div>
-          <div class="contacts__card reveal">
-            <h3 class="contacts__label">WhatsApp</h3>
-            <p class="contacts__value"><a href="https://wa.me/77772441614" target="_blank" rel="noopener">+7 777 244 1614</a></p>
-          </div>
-          <div class="contacts__card reveal">
-            <h3 class="contacts__label">Instagram</h3>
-            <p class="contacts__value"><a href="https://instagram.com/opatra.karagandaa" target="_blank" rel="noopener">@opatra.karagandaa</a></p>
-          </div>
-          <div class="contacts__card reveal">
-            <h3 class="contacts__label">Приём</h3>
-            <p class="contacts__value">Ежедневно, по предварительной записи</p>
-          </div>
+          <a class="contact reveal" href="https://2gis.kz/karaganda/search/%D0%95%D1%80%D1%83%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%2049%2F2" target="_blank" rel="noopener">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <span class="contact__label">Адрес</span>
+            <span class="contact__value">Караганда, ул. Ерубаева, 49/2<br>«Белый ветер», 3 этаж</span>
+          </a>
+          <a class="contact reveal d1" href="https://wa.me/77772441614" target="_blank" rel="noopener">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1"/></svg>
+            </span>
+            <span class="contact__label">WhatsApp</span>
+            <span class="contact__value">+7 777 244 1614</span>
+          </a>
+          <a class="contact reveal d2" href="https://instagram.com/opatra.karagandaa" target="_blank" rel="noopener">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="contact__label">Instagram</span>
+            <span class="contact__value">@opatra.karagandaa</span>
+          </a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ ФУТЕР ============ -->
+  <!-- ФУТЕР -->
   <footer class="footer">
     <div class="container footer__inner">
-      <img class="footer__logo" src="assets/logo.png" alt="OPATRA London" width="180" height="68" loading="lazy">
-      <p class="footer__line">Лицензированный медицинский центр косметологии · Караганда</p>
-      <p class="footer__legal">ТОО «ХАН ЛИ КЗ» · БИН 161140007400 · Лицензия № 24033797 от 26.11.2024<br>
-        <a href="assets/license.pdf" target="_blank" rel="noopener">Посмотреть лицензию</a>
-      </p>
+      <img src="assets/logo.png" alt="OPATRA London" class="footer__logo" width="130" height="40" loading="lazy">
       <nav class="footer__nav" aria-label="Навигация в футере">
         <a href="#services">Услуги</a>
+        <a href="#results">Результаты</a>
         <a href="#license">Лицензия</a>
         <a href="#booking">Запись</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <p class="footer__note">Имеются противопоказания. Необходима консультация специалиста.</p>
+      <p class="footer__meta">ТОО «ХАН ЛИ КЗ» · БИН 161140007400 · Лицензия № 24033797<br>© 2026 OPATRA London, Караганда</p>
     </div>
   </footer>
 
   <!-- Липкая кнопка WhatsApp -->
-  <a class="wa-fab" id="waFab" href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D0%B4%D1%83%D1%80%D1%83" target="_blank" rel="noopener" aria-label="Записаться в WhatsApp">
-    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" fill="currentColor">
-      <path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.8 1.4 4.7 1.4 6.6 0 12-5.3 12-11.9C28 8.3 22.6 3 16 3zm0 21.8c-1.4 0-3-.4-4.4-1.2l-.5-.3-4.3 1.4 1.4-4.2-.3-.5c-1.2-1.7-1.9-3.7-1.9-5.6 0-5.4 4.5-9.8 10-9.8s10 4.4 10 9.8-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/>
-    </svg>
+  <a href="https://wa.me/77772441614?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%B2%20OPATRA%20London"
+     class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Записаться в WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1"/></svg>
     <span>Записаться</span>
   </a>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
