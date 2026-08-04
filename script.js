@@ -6,6 +6,17 @@
 (function () {
   'use strict';
 
+  /* На мобильных браузер «запоминает» позицию скролла и открывает страницу
+     не сверху. Отключаем восстановление и стартуем с верха — КРОМЕ случая,
+     когда зашли по прямому якорю (напр. реклама ведёт на #massage). */
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function () {
+      if (!window.location.hash) window.scrollTo(0, 0);
+    });
+  }
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
