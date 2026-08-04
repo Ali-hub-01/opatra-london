@@ -795,6 +795,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   color: var(--gold-1);
 }
 .review__stars { color: var(--gold-2); letter-spacing: 3px; font-size: 14px; }
+.review__meta { display: flex; flex-direction: column; gap: 4px; }
+.review__date { font-size: 11px; letter-spacing: .04em; text-transform: none; color: rgba(255, 255, 255, .42); }
+.offer__text s { opacity: .55; }
 
 /* ---------- ЗАПИСЬ ---------- */
 .booking__aura {
