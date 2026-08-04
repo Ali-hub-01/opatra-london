@@ -328,13 +328,17 @@
         <p class="kicker reveal">Результаты</p>
         <h2 class="h2 reveal d1">До <em>и после</em></h2>
 
+        <div class="ba__tabs reveal d2" role="tablist" aria-label="Выберите процедуру">
+          <button class="ba__tab is-active" type="button" role="tab" aria-selected="true">Буккальный массаж</button>
+          <button class="ba__tab" type="button" role="tab" aria-selected="false">СМАС + Плазма</button>
+          <button class="ba__tab" type="button" role="tab" aria-selected="false">Лазер CO₂</button>
+        </div>
+
         <div class="ba reveal d2" id="baSlider" role="slider" tabindex="0"
              aria-label="Сравнение до и после: двигайте ползунок" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-          <!-- TODO: заменить на реальное фото клиента (сторона «До») -->
-          <div class="ba__before">
+          <div class="ba__before" id="baBefore">
             <span class="ba__tag">До</span>
           </div>
-          <!-- TODO: заменить на реальное фото клиента (сторона «После») -->
           <div class="ba__after" id="baAfter">
             <span class="ba__tag ba__tag--after">После</span>
           </div>
@@ -344,6 +348,7 @@
             </span>
           </div>
         </div>
+        <p class="ba__caption reveal d3" id="baCaption">Моделирующий буккальный массаж лица · 1 процедура</p>
         <p class="results__hint reveal d3">Потяните ползунок · фото публикуются с согласия клиентов</p>
       </div>
     </section>

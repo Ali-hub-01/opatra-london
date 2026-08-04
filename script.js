@@ -252,7 +252,32 @@
       if (e.key === 'End') { setBA(100); e.preventDefault(); }
     });
 
-    setBA(50);
+    /* Переключение процедур до/после */
+    var baBefore = document.getElementById('baBefore');
+    var baCaption = document.getElementById('baCaption');
+    var baTabs = Array.prototype.slice.call(document.querySelectorAll('.ba__tab'));
+    var procs = [
+      { before: 'assets/ba-bukal-before.jpg', after: 'assets/ba-bukal-after.jpg', caption: 'Моделирующий буккальный массаж лица · 1 процедура' },
+      { before: 'assets/ba-smas-before.jpg',  after: 'assets/ba-smas-after.jpg',  caption: 'СМАС-лифтинг + Плазмолифтинг' },
+      { before: 'assets/ba-co2-before.jpg',   after: 'assets/ba-co2-after.jpg',   caption: 'Лазерная шлифовка CO₂' }
+    ];
+    function setProc(i) {
+      var p = procs[i];
+      if (!p) return;
+      if (baBefore) baBefore.style.backgroundImage = 'url("' + p.before + '")';
+      baAfter.style.backgroundImage = 'url("' + p.after + '")';
+      if (baCaption) baCaption.textContent = p.caption;
+      baTabs.forEach(function (t, ti) {
+        var on = ti === i;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      setBA(50);
+    }
+    baTabs.forEach(function (t, ti) {
+      t.addEventListener('click', function () { setProc(ti); });
+    });
+    if (baTabs.length) { setProc(0); } else { setBA(50); }
   }
 
   /* ---------- Форма записи → WhatsApp ---------- */

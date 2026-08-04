@@ -523,7 +523,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 /* ---------- ДО / ПОСЛЕ ---------- */
 .ba {
   position: relative;
-  height: clamp(360px, 52vw, 560px);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  height: clamp(440px, 120vw, 640px);
   border-radius: var(--r-lg);
   overflow: hidden;
   cursor: ew-resize;
@@ -565,6 +568,54 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   background:
     radial-gradient(46% 36% at 64% 30%, rgba(255, 249, 235, .75), transparent 70%),
     radial-gradient(70% 55% at 46% 66%, rgba(244, 227, 178, .28), transparent 72%);
+}
+
+/* Реальные фото до/после — перекрывают плейсхолдеры */
+.ba__before,
+.ba__after {
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+}
+.ba__before { filter: none; }
+.ba__before::after,
+.ba__after::before { display: none; }
+
+/* Переключатель процедур */
+.ba__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.ba__tab {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 11, 12, .16);
+  background: transparent;
+  color: #2a2a2e;
+  cursor: pointer;
+  transition: color .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.ba__tab:hover { border-color: rgba(201, 162, 75, .6); }
+.ba__tab.is-active {
+  color: var(--black);
+  border-color: transparent;
+  background: var(--gold-grad-soft);
+  box-shadow: var(--shadow-gold);
+}
+.ba__caption {
+  margin-top: 16px;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 21px;
+  color: #2a2a2e;
 }
 
 .ba__tag {
