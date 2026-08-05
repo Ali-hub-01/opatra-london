@@ -136,7 +136,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 90;
+  z-index: 100;
   transition: background-color .4s var(--ease), box-shadow .4s var(--ease), padding .4s var(--ease);
 }
 .header__inner {
@@ -1097,6 +1097,15 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
   .nav__link { font-size: 22px; font-family: var(--font-serif); }
   .nav__cta { margin-top: 12px; padding: 15px 34px; font-size: 16px; }
   .burger { display: block; }
+
+  /* ФИКС мобильного меню: backdrop-filter на шапке делал её containing block
+     для fixed-меню — при прокрутке меню съезжало и не раскрывалось на весь экран.
+     Убираем blur у шапки на мобиле (фон делаем плотнее). */
+  .header.is-scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(11, 11, 12, .94);
+  }
 
   .header__logo img { width: 124px; }
 
