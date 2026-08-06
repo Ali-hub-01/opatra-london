@@ -6,44 +6,26 @@
 (function () {
   'use strict';
 
-  /* ============ ОТСЛЕЖИВАНИЕ КОНВЕРСИЙ (Google Ads / GA4) ============
-     Конверсия = клик по WhatsApp (кнопки услуг, акции, форма, липкая кнопка).
-     Вставьте свои ID в ДВА поля ниже (одно место на весь сайт):
-       WA_CONVERSION — из Google Ads → Цели → Конверсии → действие «Клик WhatsApp»
-                       формат: 'AW-<номер>/<метка>'
-       GA4_ID        — (необязательно) Google Analytics 4, формат 'G-XXXXXXXXXX'
-     Пока стоят плейсхолдеры (XXXX) — внешний тег НЕ грузится и ничего не ломается. */
-  var WA_CONVERSION = 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXXXXXXX'; // ← ЗАМЕНИТЬ
-  var GA4_ID = '';                                          // ← (необязательно) G-...
+  /* ============ КОНВЕРСИИ Google Ads (AW-18374440906) ============
+     Базовый тег gtag загружается в <head>. Здесь конверсии привязаны к РЕАЛЬНЫМ
+     действиям (НЕ к загрузке страницы, иначе каждый визит = конверсия):
+       "Контакт"        — клик по любой кнопке WhatsApp (услуги, акции, шапка, липкая).
+       "Отправка формы" — сабмит формы записи (см. обработчик формы ниже).
+       "Интерактивные номера" — на клик tel:/звонок, через gtag_report_conversion() (в <head>);
+                                сейчас на сайте нет tel:-ссылок, поэтому не срабатывает. */
+  var CONV_CONTACT = 'AW-18374440906/begrCI7Ukt0cEMrvzrlE'; // Контакт (клик WhatsApp)
+  var CONV_LEAD    = 'AW-18374440906/8fYTCPjVkt0cEMrvzrlE'; // Отправка формы
 
-  (function initGtag() {
-    var awId = (WA_CONVERSION.split('/')[0] || '');
-    var hasAds = /^AW-\d+$/.test(awId);
-    var hasGa4 = /^G-\w+$/.test(GA4_ID);
-    if (!hasAds && !hasGa4) return; // плейсхолдеры — внешний тег не грузим
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + (hasAds ? awId : GA4_ID);
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    gtag('js', new Date());
-    if (hasAds) gtag('config', awId);
-    if (hasGa4) gtag('config', GA4_ID);
-  })();
-
-  function trackWhatsApp(source) {
-    if (typeof window.gtag !== 'function') return;
-    if (/^AW-\d+\/.+/.test(WA_CONVERSION)) {
-      gtag('event', 'conversion', { send_to: WA_CONVERSION }); // конверсия Google Ads
+  function fireConversion(sendTo) {
+    if (typeof window.gtag === 'function') {
+      gtag('event', 'conversion', { send_to: sendTo, value: 1.0, currency: 'USD' });
     }
-    gtag('event', 'whatsapp_click', { source: source || 'link' }); // событие для GA4
   }
 
-  /* Любой клик по ссылке wa.me = конверсия */
+  /* Любой клик по ссылке wa.me = конверсия "Контакт" */
   document.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
-    if (a) trackWhatsApp('link');
+    if (a) fireConversion(CONV_CONTACT);
   });
 
   /* На мобильных браузер «запоминает» позицию скролла и открывает страницу
@@ -374,7 +356,7 @@
         'Телефон: ' + phone + '\n' +
         'Услуга: ' + service;
 
-      trackWhatsApp('form');
+      fireConversion(CONV_LEAD);
       window.open('https://wa.me/77772441614?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
   }

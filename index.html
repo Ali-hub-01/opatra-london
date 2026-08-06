@@ -3,6 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18374440906"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18374440906');
+    /* Конверсия "Интерактивные номера телефонов" — вызывать на клик по tel:-ссылке/кнопке звонка */
+    function gtag_report_conversion(url) {
+      var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18374440906/tg9hCKGWgt0cEMrvzrlE',
+        'value': 1.0, 'currency': 'USD', 'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <title>OPATRA London — медицинский центр косметологии в Караганде</title>
   <meta name="description" content="OPATRA London — премиальный медицинский центр косметологии в Караганде. Аппаратная и инъекционная косметология, коррекция фигуры, трихология, капельная терапия. Лицензия Минздрава РК. Ерубаева 49/2, «Белый ветер», 3 этаж.">
 
