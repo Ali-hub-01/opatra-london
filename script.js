@@ -6,6 +6,46 @@
 (function () {
   'use strict';
 
+  /* ============ ОТСЛЕЖИВАНИЕ КОНВЕРСИЙ (Google Ads / GA4) ============
+     Конверсия = клик по WhatsApp (кнопки услуг, акции, форма, липкая кнопка).
+     Вставьте свои ID в ДВА поля ниже (одно место на весь сайт):
+       WA_CONVERSION — из Google Ads → Цели → Конверсии → действие «Клик WhatsApp»
+                       формат: 'AW-<номер>/<метка>'
+       GA4_ID        — (необязательно) Google Analytics 4, формат 'G-XXXXXXXXXX'
+     Пока стоят плейсхолдеры (XXXX) — внешний тег НЕ грузится и ничего не ломается. */
+  var WA_CONVERSION = 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXXXXXXX'; // ← ЗАМЕНИТЬ
+  var GA4_ID = '';                                          // ← (необязательно) G-...
+
+  (function initGtag() {
+    var awId = (WA_CONVERSION.split('/')[0] || '');
+    var hasAds = /^AW-\d+$/.test(awId);
+    var hasGa4 = /^G-\w+$/.test(GA4_ID);
+    if (!hasAds && !hasGa4) return; // плейсхолдеры — внешний тег не грузим
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + (hasAds ? awId : GA4_ID);
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    if (hasAds) gtag('config', awId);
+    if (hasGa4) gtag('config', GA4_ID);
+  })();
+
+  function trackWhatsApp(source) {
+    if (typeof window.gtag !== 'function') return;
+    if (/^AW-\d+\/.+/.test(WA_CONVERSION)) {
+      gtag('event', 'conversion', { send_to: WA_CONVERSION }); // конверсия Google Ads
+    }
+    gtag('event', 'whatsapp_click', { source: source || 'link' }); // событие для GA4
+  }
+
+  /* Любой клик по ссылке wa.me = конверсия */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+    if (a) trackWhatsApp('link');
+  });
+
   /* На мобильных браузер «запоминает» позицию скролла и открывает страницу
      не сверху. Отключаем восстановление и стартуем с верха — КРОМЕ случая,
      когда зашли по прямому якорю (напр. реклама ведёт на #massage). */
@@ -334,6 +374,7 @@
         'Телефон: ' + phone + '\n' +
         'Услуга: ' + service;
 
+      trackWhatsApp('form');
       window.open('https://wa.me/77772441614?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
   }
