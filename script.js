@@ -6,15 +6,15 @@
 (function () {
   'use strict';
 
-  /* ============ КОНВЕРСИИ Google Ads (AW-18374440906) ============
+  /* ============ КОНВЕРСИИ Google Ads (AW-18391560316) ============
      Базовый тег gtag загружается в <head>. Здесь конверсии привязаны к РЕАЛЬНЫМ
      действиям (НЕ к загрузке страницы, иначе каждый визит = конверсия):
        "Контакт"        — клик по любой кнопке WhatsApp (услуги, акции, шапка, липкая).
        "Отправка формы" — сабмит формы записи (см. обработчик формы ниже).
        "Интерактивные номера" — на клик tel:/звонок, через gtag_report_conversion() (в <head>);
                                 сейчас на сайте нет tel:-ссылок, поэтому не срабатывает. */
-  var CONV_CONTACT = 'AW-18374440906/begrCI7Ukt0cEMrvzrlE'; // Контакт (клик WhatsApp)
-  var CONV_LEAD    = 'AW-18374440906/8fYTCPjVkt0cEMrvzrlE'; // Отправка формы
+  var CONV_CONTACT = 'AW-18391560316/9j9UCOiWguocEPzg48FE'; // Контакт (клик WhatsApp)
+  var CONV_LEAD    = 'AW-18391560316/AN6KCJ7t9-kcEPzg48FE'; // Отправка формы
 
   function fireConversion(sendTo) {
     if (typeof window.gtag === 'function') {
