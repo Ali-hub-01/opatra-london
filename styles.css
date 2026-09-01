@@ -728,6 +728,33 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .license__facts dd { font-size: 14.5px; color: #d9d9de; }
 
 /* ---------- АКЦИИ ---------- */
+/* Секция флагманского оффера — сразу под hero, на видном месте */
+.offer-lead {
+  background: var(--white);
+  padding: clamp(40px, 6vw, 84px) 0 clamp(10px, 2vw, 24px);
+}
+.offer-hero__badge--free {
+  font-size: 1.06rem; padding: 10px 22px;
+  animation: offerPulse 2.4s var(--ease) infinite;
+}
+@keyframes offerPulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(201, 162, 75, 0.35); transform: scale(1); }
+  50% { box-shadow: 0 12px 36px rgba(201, 162, 75, 0.62); transform: scale(1.035); }
+}
+.offer-hero__price {
+  margin: 2px 0 14px; font-size: 1.2rem; color: #d8d5cd;
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+}
+.offer-hero__price b {
+  font-family: var(--font-display, "Cormorant Garamond", serif);
+  font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 700; line-height: 1;
+  color: var(--gold-1); letter-spacing: 0.01em;
+}
+.offer-hero__price s { color: #8f8c84; font-size: 1.05rem; }
+@media (prefers-reduced-motion: reduce) {
+  .offer-hero__badge--free { animation: none; }
+}
+
 /* Флагманский оффер (SPA-программа за 0 ₸) */
 .offer-hero {
   position: relative;
