@@ -733,6 +733,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   background: var(--white);
   padding: clamp(40px, 6vw, 84px) 0 clamp(10px, 2vw, 24px);
 }
+/* следующая секция не должна оставлять большой пустой зазор под оффером */
+.offer-lead + section {
+  padding-top: clamp(32px, 4.5vw, 60px);
+}
 .offer-hero__badge--free {
   font-size: 1.06rem; padding: 10px 22px;
   animation: offerPulse 2.4s var(--ease) infinite;
