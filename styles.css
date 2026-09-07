@@ -1256,3 +1256,14 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
 .trust__ico svg { width: 26px; height: 26px; }
 .trust__title { font-family: var(--font-sans); font-weight: 700; font-size: 18px; color: var(--ink); margin-bottom: 8px; }
 .trust__text { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
+
+/* ============ Отзывы: пометка «подтверждён · 2ГИС» ============ */
+.review__source {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 14px;
+  font-size: 12.5px; font-weight: 600; color: #6ec38a; letter-spacing: .01em;
+}
+.review__source::before {
+  content: "✓"; display: inline-grid; place-items: center;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(110, 195, 138, .16); color: #6ec38a; font-size: 11px;
+}
