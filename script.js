@@ -361,3 +361,38 @@
     });
   }
 })();
+
+/* ===== Лайтбокс лицензии ===== */
+(function () {
+  var box = document.getElementById('licenseLightbox');
+  if (!box) return;
+  var img = document.getElementById('lightboxImg');
+  var cap = document.getElementById('lightboxCap');
+
+  function open(src, caption) {
+    img.setAttribute('src', src);
+    img.setAttribute('alt', caption || 'Медицинская лицензия OPATRA London');
+    cap.textContent = caption || '';
+    box.hidden = false;
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    box.hidden = true;
+    box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    img.setAttribute('src', '');
+  }
+
+  document.querySelectorAll('[data-license-src]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      open(btn.getAttribute('data-license-src'), btn.getAttribute('data-license-cap'));
+    });
+  });
+  box.addEventListener('click', function (e) {
+    if (e.target.hasAttribute('data-lightbox-close')) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !box.hidden) close();
+  });
+})();

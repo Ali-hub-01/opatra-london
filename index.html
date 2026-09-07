@@ -50,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -405,27 +405,23 @@
     <section class="license section-dark" id="license">
       <div class="license__glow" aria-hidden="true"></div>
       <div class="container license__grid">
-        <div class="license__seal reveal" aria-hidden="true">
-          <svg viewBox="0 0 220 220" class="seal">
-            <defs>
-              <linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#F4E3B2"/>
-                <stop offset=".5" stop-color="#C9A24B"/>
-                <stop offset="1" stop-color="#8C6B23"/>
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#sealGold)">
-              <circle cx="110" cy="110" r="104" stroke-width="1" opacity=".45"/>
-              <circle cx="110" cy="110" r="96" stroke-width="2.5"/>
-              <circle cx="110" cy="110" r="66" stroke-width="1.2"/>
-              <g stroke-width="2" opacity=".9">
-                <path d="M110 10v12M110 198v12M10 110h12M198 110h12M39 39l8.5 8.5M172.5 172.5l8.5 8.5M181 39l-8.5 8.5M47.5 172.5L39 181"/>
-              </g>
-            </g>
-            <text x="110" y="98" text-anchor="middle" fill="url(#sealGold)" font-size="14" letter-spacing="4" font-family="Manrope, sans-serif">ЛИЦЕНЗИЯ</text>
-            <text x="110" y="124" text-anchor="middle" fill="url(#sealGold)" font-size="19" letter-spacing="2" font-weight="600" font-family="Manrope, sans-serif">№ 24033797</text>
-            <text x="110" y="146" text-anchor="middle" fill="#9a9aa2" font-size="10.5" letter-spacing="2.5" font-family="Manrope, sans-serif">МИНЗДРАВ РК</text>
-          </svg>
+        <div class="license__docs reveal" aria-label="Страницы лицензии">
+          <button class="license__thumb" type="button" data-license-src="assets/license-1.webp" data-license-cap="Медицинская лицензия · страница 1">
+            <img src="assets/license-1.webp" alt="Медицинская лицензия №24033797, страница 1" loading="lazy" width="1406" height="1988">
+            <span class="license__zoom" aria-hidden="true">Открыть</span>
+          </button>
+          <button class="license__thumb" type="button" data-license-src="assets/license-3.webp" data-license-cap="Медицинская лицензия · страница 3">
+            <img src="assets/license-3.webp" alt="Медицинская лицензия №24033797, страница 3" loading="lazy" width="1406" height="1988">
+            <span class="license__zoom" aria-hidden="true">Открыть</span>
+          </button>
+          <button class="license__thumb" type="button" data-license-src="assets/license-5.webp" data-license-cap="Медицинская лицензия · страница 5">
+            <img src="assets/license-5.webp" alt="Медицинская лицензия №24033797, страница 5" loading="lazy" width="1406" height="1988">
+            <span class="license__zoom" aria-hidden="true">Открыть</span>
+          </button>
+          <button class="license__thumb" type="button" data-license-src="assets/license-7.webp" data-license-cap="Медицинская лицензия · страница 7">
+            <img src="assets/license-7.webp" alt="Медицинская лицензия №24033797, страница 7" loading="lazy" width="1406" height="1988">
+            <span class="license__zoom" aria-hidden="true">Открыть</span>
+          </button>
         </div>
 
         <div class="license__text">
@@ -682,6 +678,16 @@
     <span>Записаться</span>
   </a>
 
-  <script src="script.js"></script>
+  <!-- Лайтбокс лицензии -->
+  <div class="lightbox" id="licenseLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр лицензии">
+    <div class="lightbox__overlay" data-lightbox-close></div>
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Закрыть">&times;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="Медицинская лицензия OPATRA London">
+      <figcaption class="lightbox__cap" id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js?v=2"></script>
 </body>
 </html>

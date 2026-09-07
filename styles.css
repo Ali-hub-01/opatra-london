@@ -1267,3 +1267,48 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
   width: 16px; height: 16px; border-radius: 50%;
   background: rgba(110, 195, 138, .16); color: #6ec38a; font-size: 11px;
 }
+
+/* ============ Лицензия: миниатюры страниц ============ */
+.license__docs {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+.license__thumb {
+  position: relative; padding: 0; border: 1px solid rgba(201,162,75,.28);
+  border-radius: var(--r-md); overflow: hidden; cursor: zoom-in; background: #fff;
+  box-shadow: 0 16px 44px -20px rgba(0,0,0,.6);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.license__thumb img {
+  display: block; width: 100%; height: 100%; aspect-ratio: 1406 / 1988;
+  object-fit: cover; object-position: top center;
+}
+.license__thumb:hover { transform: translateY(-4px); border-color: var(--gold-2); box-shadow: var(--shadow-gold); }
+.license__zoom {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%);
+  padding: 7px 16px; border-radius: 100px; font-size: 12.5px; font-weight: 700;
+  color: var(--black); background: var(--gold-grad); box-shadow: var(--shadow-gold);
+  opacity: 0; transition: opacity .3s var(--ease);
+}
+.license__thumb:hover .license__zoom { opacity: 1; }
+
+/* ============ Лайтбокс ============ */
+.lightbox { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.lightbox[hidden] { display: none; }
+.lightbox__overlay { position: absolute; inset: 0; background: rgba(8,8,10,.9); backdrop-filter: blur(6px); }
+.lightbox__figure {
+  position: relative; z-index: 1; margin: 0; max-width: min(760px, 100%); max-height: 92vh;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  animation: lbIn .35s var(--ease);
+}
+.lightbox__img {
+  max-width: 100%; max-height: 86vh; border-radius: 10px; background: #fff;
+  box-shadow: 0 40px 100px -30px rgba(0,0,0,.8);
+}
+.lightbox__cap { color: #d8d2c4; font-size: 13.5px; font-weight: 600; letter-spacing: .02em; }
+.lightbox__close {
+  position: absolute; top: 18px; right: 22px; z-index: 2; width: 46px; height: 46px;
+  border: none; border-radius: 50%; cursor: pointer; font-size: 30px; line-height: 1;
+  color: var(--black); background: var(--gold-grad); box-shadow: var(--shadow-gold);
+}
+@keyframes lbIn { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@media (min-width: 720px) { .license__docs { gap: 18px; } }
