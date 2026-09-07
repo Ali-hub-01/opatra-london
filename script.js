@@ -384,9 +384,9 @@
     img.setAttribute('src', '');
   }
 
-  document.querySelectorAll('[data-license-src]').forEach(function (btn) {
+  document.querySelectorAll('[data-zoom-src]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      open(btn.getAttribute('data-license-src'), btn.getAttribute('data-license-cap'));
+      open(btn.getAttribute('data-zoom-src'), btn.getAttribute('data-zoom-cap'));
     });
   });
   box.addEventListener('click', function (e) {

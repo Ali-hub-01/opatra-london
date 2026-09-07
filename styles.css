@@ -1312,3 +1312,14 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
 }
 @keyframes lbIn { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
 @media (min-width: 720px) { .license__docs { gap: 18px; } }
+
+/* ============ Отзывы: скриншоты 2ГИС (masonry) ============ */
+.reviews__shots { columns: 3 300px; column-gap: 18px; margin-top: clamp(30px, 4vw, 44px); }
+.reviews__shot {
+  display: block; width: 100%; break-inside: avoid; margin: 0 0 18px; padding: 0;
+  border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-md); overflow: hidden;
+  cursor: zoom-in; background: #fff; box-shadow: 0 16px 44px -22px rgba(0,0,0,.7);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.reviews__shot img { display: block; width: 100%; height: auto; }
+.reviews__shot:hover { transform: translateY(-4px); border-color: var(--gold-2); box-shadow: var(--shadow-gold); }
