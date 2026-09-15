@@ -50,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -154,26 +154,34 @@
     <!-- О ЦЕНТРЕ -->
     <section class="about section-light" id="about">
       <div class="container">
-        <div class="about__grid">
+        <div class="about__grid about__grid--media">
           <div class="about__text">
             <p class="kicker reveal">О центре</p>
             <h2 class="h2 reveal d1">Эстетика, доказанная <em>медициной</em></h2>
             <p class="about__phrase reveal d2">Врачебный подход, мировые технологии и атмосфера, в которую хочется возвращаться.</p>
+            <div class="about__stats">
+              <div class="stat reveal">
+                <span class="stat__num" data-count="8">0</span>
+                <span class="stat__label">направлений</span>
+              </div>
+              <div class="stat reveal d1">
+                <span class="stat__num" data-count="40" data-suffix="+">0</span>
+                <span class="stat__label">процедур</span>
+              </div>
+              <div class="stat reveal d2">
+                <span class="stat__num">I</span>
+                <span class="stat__label">класс мед. лицензии</span>
+              </div>
+            </div>
           </div>
-          <div class="about__stats">
-            <div class="stat reveal">
-              <span class="stat__num" data-count="8">0</span>
-              <span class="stat__label">направлений</span>
+          <figure class="about__media reveal d2">
+            <div class="process__frame">
+              <video class="process__video" autoplay muted loop playsinline preload="metadata" poster="assets/process-cleaning-poster.webp" width="480" height="854" aria-label="Живое видео: уход за лицом в OPATRA London">
+                <source src="assets/process-cleaning.mp4" type="video/mp4">
+              </video>
             </div>
-            <div class="stat reveal d1">
-              <span class="stat__num" data-count="40" data-suffix="+">0</span>
-              <span class="stat__label">процедур</span>
-            </div>
-            <div class="stat reveal d2">
-              <span class="stat__num">I</span>
-              <span class="stat__label">класс мед. лицензии</span>
-            </div>
-          </div>
+            <figcaption class="process__cap">Живой момент · уход за лицом в OPATRA London</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -386,6 +394,51 @@
       </div>
     </section>
 
+    <!-- КОМАНДА -->
+    <section class="team section-graphite" id="team">
+      <div class="container">
+        <p class="kicker kicker--gold reveal">Команда</p>
+        <h2 class="h2 h2--light reveal d1">Врачи, которым <em>доверяют</em></h2>
+        <p class="note note--dark reveal d2">Нажмите на видео, врач сам расскажет о себе · со звуком</p>
+
+        <div class="team__grid">
+          <article class="team__card reveal">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-efimenko-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Ефименко Светлана Олеговна, врач-косметолог">
+                <source src="assets/doctor-efimenko.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Ефименко Светлана Олеговна</h3>
+              <p class="team__role">Врач-косметолог</p>
+            </div>
+          </article>
+          <article class="team__card reveal d1">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-zavgorodneva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Завгороднева Татьяна Валерьевна, врач-косметолог">
+                <source src="assets/doctor-zavgorodneva.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Завгороднева Татьяна Валерьевна</h3>
+              <p class="team__role">Врач-косметолог</p>
+            </div>
+          </article>
+          <article class="team__card reveal d2">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-shabakaeva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Шабакаева Наталья Владимировна, врач-косметолог, инъекционист">
+                <source src="assets/doctor-shabakaeva.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Шабакаева Наталья Владимировна</h3>
+              <p class="team__role">Врач-косметолог · инъекционист</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- РЕЗУЛЬТАТЫ: ДО / ПОСЛЕ -->
     <section class="results section-light" id="results">
       <div class="container">
@@ -445,14 +498,6 @@
           </div>
         </div>
 
-        <figure class="process reveal">
-          <div class="process__frame">
-            <video class="process__video" autoplay muted loop playsinline preload="metadata" poster="assets/process-cleaning-poster.webp" width="480" height="854" aria-label="Живое видео: уход за лицом в OPATRA London">
-              <source src="assets/process-cleaning.mp4" type="video/mp4">
-            </video>
-          </div>
-          <figcaption class="process__cap">Живой момент · уход за лицом в OPATRA London</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -533,50 +578,6 @@
       </div>
     </section>
 
-    <!-- КОМАНДА -->
-    <section class="team section-graphite" id="team">
-      <div class="container">
-        <p class="kicker kicker--gold reveal">Команда</p>
-        <h2 class="h2 h2--light reveal d1">Врачи, которым <em>доверяют</em></h2>
-        <p class="note note--dark reveal d2">Нажмите на видео, врач сам расскажет о себе · со звуком</p>
-
-        <div class="team__grid">
-          <article class="team__card reveal">
-            <div class="team__media">
-              <video controls playsinline preload="none" poster="assets/doctor-efimenko-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Ефименко Светлана Олеговна, врач-косметолог">
-                <source src="assets/doctor-efimenko.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="team__info">
-              <h3 class="team__name">Ефименко Светлана Олеговна</h3>
-              <p class="team__role">Врач-косметолог</p>
-            </div>
-          </article>
-          <article class="team__card reveal d1">
-            <div class="team__media">
-              <video controls playsinline preload="none" poster="assets/doctor-zavgorodneva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Завгороднева Татьяна Валерьевна, врач-косметолог">
-                <source src="assets/doctor-zavgorodneva.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="team__info">
-              <h3 class="team__name">Завгороднева Татьяна Валерьевна</h3>
-              <p class="team__role">Врач-косметолог</p>
-            </div>
-          </article>
-          <article class="team__card reveal d2">
-            <div class="team__media">
-              <video controls playsinline preload="none" poster="assets/doctor-shabakaeva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Шабакаева Наталья Владимировна, врач-косметолог, инъекционист">
-                <source src="assets/doctor-shabakaeva.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="team__info">
-              <h3 class="team__name">Шабакаева Наталья Владимировна</h3>
-              <p class="team__role">Врач-косметолог · инъекционист</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- АКЦИИ -->
     <section class="offers section-light" id="offers">

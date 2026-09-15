@@ -1542,3 +1542,17 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
   font-style: italic; font-size: 18px;
   color: var(--ink-soft);
 }
+
+/* ---------- О ЦЕНТРЕ: видео процедуры справа ---------- */
+.about__grid--media { align-items: center; }
+.about__text .about__stats { margin-top: clamp(26px, 4vw, 40px); }
+.about__media {
+  margin: 0;
+  width: 100%;
+  max-width: 340px;
+  justify-self: center;
+}
+.about__media .process__cap { text-align: center; }
+@media (max-width: 1000px) {
+  .about__media { max-width: 320px; margin-inline: auto; }
+}
