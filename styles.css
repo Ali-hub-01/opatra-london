@@ -160,7 +160,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 26px;
 }
 .nav__link {
   position: relative;
@@ -168,7 +168,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   font-size: 14px;
   font-weight: 500;
   letter-spacing: .04em;
+  white-space: nowrap;
   transition: color .3s var(--ease);
+}
+@media (max-width: 1040px) and (min-width: 761px) {
+  .nav { gap: 18px; }
+  .nav__link { font-size: 13px; letter-spacing: .02em; }
+  .nav__cta { padding: 12px 20px; }
 }
 .nav__link::after {
   content: "";
@@ -1323,3 +1329,216 @@ body.has-cursor-glow .cursor-glow { opacity: 1; }
 }
 .reviews__shot img { display: block; width: 100%; height: auto; }
 .reviews__shot:hover { transform: translateY(-4px); border-color: var(--gold-2); box-shadow: var(--shadow-gold); }
+
+/* ============ Экран загрузки (preloader) ============ */
+.preloader {
+  position: fixed; inset: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(85% 65% at 50% 40%, rgba(201, 162, 75, .30) 0%, rgba(140, 107, 35, .10) 45%, transparent 72%),
+    radial-gradient(130% 110% at 50% 110%, #191307 0%, transparent 55%),
+    linear-gradient(180deg, #121012 0%, var(--black) 100%);
+  background-color: var(--black);
+  transition: opacity .7s var(--ease), visibility .7s var(--ease);
+}
+.preloader.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader.is-gone { display: none; }
+.preloader__inner { display: grid; justify-items: center; gap: 34px; }
+.preloader__emblem {
+  position: relative;
+  display: grid; place-items: center;
+  width: min(70vw, 290px); aspect-ratio: 1;
+}
+.preloader__logo {
+  width: min(52vw, 205px); height: auto;
+  filter: drop-shadow(0 0 22px rgba(201, 162, 75, .5));
+  animation: preLogo 2.4s ease-in-out infinite;
+}
+@keyframes preLogo {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(201, 162, 75, .35)); transform: scale(1); }
+  50%      { filter: drop-shadow(0 0 32px rgba(244, 227, 178, .8)); transform: scale(1.02); }
+}
+.preloader__ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg,
+    transparent 0 68%,
+    rgba(201, 162, 75, .35) 80%,
+    rgba(244, 227, 178, .95) 92%,
+    transparent 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1.5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1.5px));
+  animation: preSpin 1.6s linear infinite;
+}
+.preloader__ring::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: rgba(201, 162, 75, .18);
+}
+@keyframes preSpin { to { transform: rotate(360deg); } }
+.preloader__bar {
+  display: block; width: min(48vw, 210px); height: 2px;
+  border-radius: 2px; overflow: hidden;
+  background: rgba(244, 227, 178, .14);
+}
+.preloader__bar i {
+  display: block; height: 100%; width: 42%;
+  border-radius: 2px; background: var(--gold-grad);
+  animation: preBar 1.3s var(--ease) infinite;
+}
+@keyframes preBar {
+  0%   { transform: translateX(-110%); }
+  100% { transform: translateX(260%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader__logo, .preloader__ring, .preloader__bar i { animation: none; }
+}
+
+/* ============ Hero: видео-фон + скрим ============ */
+.hero__video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; z-index: 0;
+  filter: brightness(.5) saturate(1.06) contrast(1.03);
+}
+.hero__scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(180deg,
+      rgba(11, 11, 12, .9) 0%,
+      rgba(11, 11, 12, .62) 26%,
+      rgba(11, 11, 12, .58) 56%,
+      rgba(11, 11, 12, .94) 100%),
+    radial-gradient(130% 90% at 50% 48%, rgba(11, 11, 12, .1) 0%, rgba(11, 11, 12, .5) 72%, rgba(11, 11, 12, .74) 100%);
+}
+.hero__canvas, .hero__aura { z-index: 1; }
+.hero__canvas { opacity: .55; }
+@media (max-width: 760px) {
+  .hero__scrim {
+    background:
+      linear-gradient(180deg,
+        rgba(11, 11, 12, .9) 0%,
+        rgba(11, 11, 12, .66) 28%,
+        rgba(11, 11, 12, .62) 58%,
+        rgba(11, 11, 12, .94) 100%);
+  }
+}
+
+/* ============ Команда: видео-визитки врачей ============ */
+.team__grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: 26px;
+  max-width: 380px;
+  margin: clamp(30px, 4vw, 46px) auto 0;
+}
+@media (min-width: 900px) {
+  .team__grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+    gap: clamp(20px, 2.6vw, 30px);
+  }
+}
+.team__card {
+  border-radius: var(--r-md); overflow: hidden;
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(201, 162, 75, .32);
+  box-shadow: 0 26px 60px -30px rgba(0, 0, 0, .75);
+  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.team__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244, 227, 178, .6);
+  box-shadow: 0 32px 74px -30px rgba(201, 162, 75, .38);
+}
+.team__media {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  background: #101012;
+}
+.team__media video {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.team__info { padding: 18px 20px 24px; text-align: center; }
+.team__name {
+  font-family: var(--font-serif);
+  font-weight: 600; font-size: 21px; line-height: 1.25;
+  color: var(--white); margin-bottom: 6px;
+}
+.team__role {
+  font-size: 12.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  background: var(--gold-grad);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+
+/* ============ Результаты: галерея «ещё до и после» ============ */
+.ba-more { margin-top: clamp(56px, 8vw, 92px); }
+.ba-more__title {
+  font-family: var(--font-serif);
+  font-weight: 600; font-size: clamp(26px, 3.4vw, 40px);
+  text-align: center; color: var(--ink);
+  margin-bottom: clamp(22px, 3vw, 36px);
+}
+.ba-more__title em {
+  font-style: italic;
+  background: var(--gold-grad);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.ba-more__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+@media (min-width: 860px) {
+  .ba-more__grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+.ba-more__item {
+  display: grid; padding: 0; text-align: left;
+  border-radius: var(--r-md); overflow: hidden;
+  background: var(--paper-soft);
+  border: 1px solid rgba(201, 162, 75, .22);
+  box-shadow: var(--shadow-soft);
+  cursor: zoom-in;
+  transition: transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+}
+.ba-more__item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-2);
+  box-shadow: var(--shadow-gold);
+}
+.ba-more__item img {
+  display: block; width: 100%;
+  aspect-ratio: 1 / 1; object-fit: cover;
+}
+.ba-more__cap {
+  display: block; padding: 10px 12px 13px;
+  font-size: 12.5px; font-weight: 600; line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+/* ============ Результаты: живое видео процедуры ============ */
+.process {
+  margin: clamp(56px, 8vw, 92px) auto 0;
+  max-width: 390px;
+  text-align: center;
+}
+.process__frame {
+  position: relative; overflow: hidden;
+  border-radius: var(--r-lg);
+  border: 1px solid rgba(201, 162, 75, .45);
+  aspect-ratio: 480 / 854;
+  background: #101012;
+  box-shadow: 0 30px 80px -32px rgba(201, 162, 75, .42), var(--shadow-soft);
+}
+.process__frame video {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.process__cap {
+  margin-top: 14px;
+  font-family: var(--font-serif);
+  font-style: italic; font-size: 18px;
+  color: var(--ink-soft);
+}

@@ -396,3 +396,64 @@
     if (e.key === 'Escape' && !box.hidden) close();
   });
 })();
+
+/* ===== Экран загрузки (preloader) ===== */
+(function () {
+  var pre = document.getElementById('preloader');
+  if (!pre) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var shownAt = Date.now();
+  var hidden = false;
+
+  function hide() {
+    if (hidden) return;
+    hidden = true;
+    /* минимальный показ ~600 мс, чтобы не мигал; при reduced-motion прячем сразу */
+    var wait = reduce ? 0 : Math.max(0, 600 - (Date.now() - shownAt));
+    setTimeout(function () {
+      pre.classList.add('is-done');
+      /* после fade убираем из потока, чтобы не перехватывал клики */
+      setTimeout(function () { pre.classList.add('is-gone'); }, reduce ? 0 : 750);
+    }, wait);
+  }
+
+  if (document.readyState === 'complete') { hide(); }
+  else { window.addEventListener('load', hide); }
+  /* страховка: не держим оверлей дольше 4 секунд */
+  setTimeout(hide, 4000);
+})();
+
+/* ===== Фоновые видео (hero + процедура): reduced-motion и пауза вне экрана ===== */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = document.querySelectorAll('.hero__video, .process__video');
+  vids.forEach(function (v) {
+    if (reduce) {
+      /* показываем только постер, без движения */
+      v.removeAttribute('autoplay');
+      v.pause();
+      return;
+    }
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var p = entry.target.play();
+          if (p && p.catch) p.catch(function () {});
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0 }).observe(v);
+  });
+})();
+
+/* ===== Команда: играет только одно видео за раз ===== */
+(function () {
+  var vids = document.querySelectorAll('.team__media video');
+  vids.forEach(function (v) {
+    v.addEventListener('play', function () {
+      vids.forEach(function (other) { if (other !== v) other.pause(); });
+    });
+  });
+})();

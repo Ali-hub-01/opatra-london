@@ -50,9 +50,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
+
+  <!-- ЭКРАН ЗАГРУЗКИ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__emblem">
+        <span class="preloader__ring" aria-hidden="true"></span>
+        <img class="preloader__logo" src="assets/logo.png" alt="OPATRA London" width="210" height="64">
+      </div>
+      <span class="preloader__bar" aria-hidden="true"><i></i></span>
+    </div>
+  </div>
 
   <!-- Свечение под курсором (только десктоп) -->
   <div class="cursor-glow" aria-hidden="true"></div>
@@ -68,6 +79,7 @@
         <a href="#about" class="nav__link">О центре</a>
         <a href="#services" class="nav__link">Услуги</a>
         <a href="#results" class="nav__link">Результаты</a>
+        <a href="#team" class="nav__link">Команда</a>
         <a href="#license" class="nav__link">Лицензия</a>
         <a href="#offers" class="nav__link">Акции</a>
         <a href="#contacts" class="nav__link">Контакты</a>
@@ -84,6 +96,10 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero__scrim" aria-hidden="true"></div>
       <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
       <div class="hero__aura" aria-hidden="true"></div>
 
@@ -398,6 +414,45 @@
         </div>
         <p class="ba__caption reveal d3" id="baCaption">Моделирующий буккальный массаж лица · 1 процедура</p>
         <p class="results__hint reveal d3">Потяните ползунок · фото публикуются с согласия клиентов</p>
+
+        <div class="ba-more">
+          <h3 class="ba-more__title reveal">Ещё до <em>и после</em></h3>
+          <div class="ba-more__grid">
+            <button class="ba-more__item reveal" type="button" data-zoom-src="assets/ba-rf-microneedling.webp" data-zoom-cap="Микроигольчатый RF-лифтинг">
+              <img src="assets/ba-rf-microneedling.webp" alt="До и после: микроигольчатый RF-лифтинг" loading="lazy" width="1080" height="1080">
+              <span class="ba-more__cap">Микроигольчатый RF-лифтинг</span>
+            </button>
+            <button class="ba-more__item reveal d1" type="button" data-zoom-src="assets/ba-co2-cheek.webp" data-zoom-cap="Лазер CO₂ · постакне">
+              <img src="assets/ba-co2-cheek.webp" alt="До и после: лазер CO₂, постакне" loading="lazy" width="597" height="255">
+              <span class="ba-more__cap">Лазер CO₂ · постакне</span>
+            </button>
+            <button class="ba-more__item reveal d2" type="button" data-zoom-src="assets/ba-co2-scars.webp" data-zoom-cap="Лазер CO₂ · рубцы постакне">
+              <img src="assets/ba-co2-scars.webp" alt="До и после: лазер CO₂, рубцы постакне" loading="lazy" width="1280" height="642">
+              <span class="ba-more__cap">Лазер CO₂ · рубцы постакне</span>
+            </button>
+            <button class="ba-more__item reveal" type="button" data-zoom-src="assets/ba-amino.webp" data-zoom-cap="Реванель Амино · курс 4 процедуры">
+              <img src="assets/ba-amino.webp" alt="До и после: Реванель Амино, курс 4 процедуры" loading="lazy" width="960" height="1280">
+              <span class="ba-more__cap">Реванель Амино · курс 4 процедуры</span>
+            </button>
+            <button class="ba-more__item reveal d1" type="button" data-zoom-src="assets/ba-hair.webp" data-zoom-cap="Трихология · Дарсонваль, 4 Актив Про, Лаеннек">
+              <img src="assets/ba-hair.webp" alt="До и после: трихология, Дарсонваль, 4 Актив Про, Лаеннек" loading="lazy" width="960" height="1280">
+              <span class="ba-more__cap">Трихология · Дарсонваль, 4 Актив Про, Лаеннек</span>
+            </button>
+            <button class="ba-more__item reveal d2" type="button" data-zoom-src="assets/ba-revanelle.webp" data-zoom-cap="Реванель Тон, периорбитальная зона + Лифт по 5 точкам">
+              <img src="assets/ba-revanelle.webp" alt="До и после: Реванель Тон, периорбитальная зона, Лифт по 5 точкам" loading="lazy" width="1280" height="917">
+              <span class="ba-more__cap">Реванель Тон, периорбитальная зона + Лифт по 5 точкам</span>
+            </button>
+          </div>
+        </div>
+
+        <figure class="process reveal">
+          <div class="process__frame">
+            <video class="process__video" autoplay muted loop playsinline preload="metadata" poster="assets/process-cleaning-poster.webp" width="480" height="854" aria-label="Живое видео: уход за лицом в OPATRA London">
+              <source src="assets/process-cleaning.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption class="process__cap">Живой момент · уход за лицом в OPATRA London</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -473,6 +528,51 @@
             <span class="trust__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21C12 21 4 14.5 4 8.5A4.5 4.5 0 0 1 12 5a4.5 4.5 0 0 1 8 3.5C20 14.5 12 21 12 21z"/></svg></span>
             <h3 class="trust__title">По показаниям врача</h3>
             <p class="trust__text">Никаких лишних процедур: план составляем после диагностики и консультации.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОМАНДА -->
+    <section class="team section-graphite" id="team">
+      <div class="container">
+        <p class="kicker kicker--gold reveal">Команда</p>
+        <h2 class="h2 h2--light reveal d1">Врачи, которым <em>доверяют</em></h2>
+        <p class="note note--dark reveal d2">Нажмите на видео, врач сам расскажет о себе · со звуком</p>
+
+        <div class="team__grid">
+          <article class="team__card reveal">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-efimenko-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Ефименко Светлана Олеговна, врач-косметолог">
+                <source src="assets/doctor-efimenko.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Ефименко Светлана Олеговна</h3>
+              <p class="team__role">Врач-косметолог</p>
+            </div>
+          </article>
+          <article class="team__card reveal d1">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-zavgorodneva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Завгороднева Татьяна Валерьевна, врач-косметолог">
+                <source src="assets/doctor-zavgorodneva.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Завгороднева Татьяна Валерьевна</h3>
+              <p class="team__role">Врач-косметолог</p>
+            </div>
+          </article>
+          <article class="team__card reveal d2">
+            <div class="team__media">
+              <video controls playsinline preload="none" poster="assets/doctor-shabakaeva-poster.webp" width="720" height="1280" aria-label="Видеовизитка: Шабакаева Наталья Владимировна, врач-косметолог, инъекционист">
+                <source src="assets/doctor-shabakaeva.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="team__info">
+              <h3 class="team__name">Шабакаева Наталья Владимировна</h3>
+              <p class="team__role">Врач-косметолог · инъекционист</p>
+            </div>
           </article>
         </div>
       </div>
@@ -651,6 +751,7 @@
       <nav class="footer__nav" aria-label="Навигация в футере">
         <a href="#services">Услуги</a>
         <a href="#results">Результаты</a>
+        <a href="#team">Команда</a>
         <a href="#license">Лицензия</a>
         <a href="#booking">Запись</a>
         <a href="#contacts">Контакты</a>
@@ -676,6 +777,6 @@
     </figure>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
