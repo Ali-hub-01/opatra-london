@@ -357,7 +357,7 @@
         'Услуга: ' + service;
 
       fireConversion(CONV_LEAD);
-      window.open('https://wa.me/77786587417?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      window.open('https://wa.me/77778903955?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
   }
 })();
